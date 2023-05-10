@@ -1,0 +1,37 @@
+
+.WorkPlaceLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 1%;
+    width: 100%;
+    border-left: 2px solid rgb(224, 224, 224);
+
+    textarea{
+        border: none;
+        outline: none;
+        background: transparent;
+        resize: none;
+        height: 90%;
+        margin-top: 1%;
+    }
+    input {
+        border: none;
+        outline: none;
+        background: transparent;
+        &[type= "text"]{
+            font-weight: 600;
+            font-size: 1.2em;
+          
+        }
+        &[type="datetime-local"] {
+            align-self: center;
+            margin: 0 0 2% 0;
+            color: #7b7b7b;
+           
+            &::-webkit-calendar-picker-indicator{
+                cursor: pointer;
+             
+            }
+        }
+    }
+}
