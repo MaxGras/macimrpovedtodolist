@@ -42,11 +42,13 @@ export default function Card({task, activeElem ,onActiveElem }){
 
 function dateFormating(task){
     const currentDate = new Date();
+
     
     let dateValue =  currentDate-task.creationDate;
+ 
     let result = task.creationDate.getMinutes();
-        
-    if(dateValue >= 24 * 60 * 60 * 1000){
+    console.log(dateValue);
+    if(dateValue >= 24 * 60 * 60 * 1000||dateValue < -(24 * 60 * 60 * 1000)){
       
         return task.creationDate.getDate() + '/'+ (task.creationDate.getMonth() + 1)+ '/'+ task.creationDate.getFullYear();
     }

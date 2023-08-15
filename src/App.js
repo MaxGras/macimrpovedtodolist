@@ -21,7 +21,6 @@ function App() {
     setSerchValues(childValue);
   }
 
-
   return (
     <TasksContext.Provider value={tasks}>
       <TasksDispatchContext.Provider value={dispatch}>
